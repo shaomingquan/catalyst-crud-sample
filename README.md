@@ -2,6 +2,8 @@
 
 > it's an extention template base on [webcore-sample](https://github.com/shaomingquan/webcore-sample)
 
+***benifit: build basic curd api quickly***
+
 0, prepare
 
 install project vendors 
