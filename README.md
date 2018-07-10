@@ -1,2 +1,1 @@
-# webcore-curd-sample
-# webcore-curd-sample
+# webcore-sample

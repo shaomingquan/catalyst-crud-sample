@@ -1,0 +1,5 @@
+{
+    "appname": "webcore-sample",
+	"port":    7777,
+    "approot": "github.com/shaomingquan/webcore-sample"
+}
