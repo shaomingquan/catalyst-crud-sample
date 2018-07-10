@@ -63,22 +63,22 @@
 			"revisionTime": "2018-05-11T05:30:14Z"
 		},
 		{
-			"checksumSHA1": "8j5tScD2RKW3qWIOYbmYsp0m8zc=",
+			"checksumSHA1": "Xdbwmi8Q8nT3NjCoIlE9lLf3TRw=",
 			"path": "github.com/shaomingquan/webcore",
-			"revision": "5598e87128edb151bd4bf43ed03f55621189ce33",
-			"revisionTime": "2018-06-06T06:46:18Z"
+			"revision": "df2300792cf9c3832913aab541112f9cbb64825e",
+			"revisionTime": "2018-07-10T08:08:41Z"
 		},
 		{
-			"checksumSHA1": "7iNOdC47LaBNyRoT6ymdLr8S0rE=",
+			"checksumSHA1": "z7B6i0rjVOJp/hW62EF4uhgJQBs=",
 			"path": "github.com/shaomingquan/webcore/core",
-			"revision": "0c8a95901d6125908c8c9634d9f924f9df5639e0",
-			"revisionTime": "2018-06-09T10:17:59Z"
+			"revision": "df2300792cf9c3832913aab541112f9cbb64825e",
+			"revisionTime": "2018-07-10T08:08:41Z"
 		},
 		{
-			"checksumSHA1": "krDDMevi3sXKA61NVxNnQMJBJac=",
+			"checksumSHA1": "RoEmyd0mVmajgVnkFu6Qjf90QPs=",
 			"path": "github.com/shaomingquan/webcore/gene",
-			"revision": "0c8a95901d6125908c8c9634d9f924f9df5639e0",
-			"revisionTime": "2018-06-09T10:17:59Z"
+			"revision": "df2300792cf9c3832913aab541112f9cbb64825e",
+			"revisionTime": "2018-07-10T08:08:41Z"
 		},
 		{
 			"checksumSHA1": "kdas0zQNtQqfUMEMFGkUF1OcgPc=",
@@ -105,5 +105,5 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "github.com/shaomingquan/webcore-sample"
+	"rootPath": "github.com/shaomingquan/webcore-curd-sample"
 }

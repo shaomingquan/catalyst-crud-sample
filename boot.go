@@ -1,6 +1,6 @@
 package main
 
-import "github.com/shaomingquan/webcore-sample/imports"
+import "github.com/shaomingquan/webcore-curd-sample/imports"
 
 func init() {
 	go func() {

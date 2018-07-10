@@ -1,5 +1,5 @@
 {
-    "appname": "webcore-sample",
+    "appname": "webcore-curd-sample",
 	"port":    7777,
-    "approot": "github.com/shaomingquan/webcore-sample"
+    "approot": "github.com/shaomingquan/webcore-curd-sample"
 }

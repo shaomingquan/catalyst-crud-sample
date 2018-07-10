@@ -1,0 +1,205 @@
+{
+	"id": "41887a48-0057-433c-8173-b3fab0e5b76f",
+	"name": "curd demo",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"ee0b9641-776a-4ae7-b27c-1fd8ec5f85d7",
+		"b8ca7cf9-e2ca-4706-a0f7-ecd6ce6a5273",
+		"1fdbe890-3692-43a0-96b1-2bfc3e7e32f1",
+		"c7926efd-71cb-4057-a3cf-5ee04ebcb0ba",
+		"1e9c939a-c30f-461c-b3e7-bc533ea418dc",
+		"36a5a116-2a14-4ba9-939f-bd61e76d9742",
+		"1177b61b-52a1-4295-af1b-594e42e3aefe"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "1177b61b-52a1-4295-af1b-594e42e3aefe",
+			"name": "时间筛选",
+			"url": "http://localhost:7777/api/data/test/?options={\"filter\":[[\"created_at\",\"2018-07-07\",\"lt\"]]}",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "options",
+					"value": "{\"filter\":[[\"created_at\",\"2018-07-07\",\"lt\"]]}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "1e9c939a-c30f-461c-b3e7-bc533ea418dc",
+			"name": "搜索",
+			"url": "http://localhost:7777/api/data/test/?options={\"filter\":[[\"name\",\"a\",\"like\"]]}",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "options",
+					"value": "{\"filter\":[[\"name\",\"a\",\"like\"]]}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "1fdbe890-3692-43a0-96b1-2bfc3e7e32f1",
+			"name": "新增",
+			"url": "http://localhost:7777/api/data/test/",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\":\"aa\",\n\t\"score\": 80\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "36a5a116-2a14-4ba9-939f-bd61e76d9742",
+			"name": "分页，指定列",
+			"url": "http://localhost:7777/api/data/test/?options={\"filter\":[[\"score\",\"80\",\"lte\"]],\"page\":1,\"page_count\":2}&fields=[\"name\",\"score\"]",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "options",
+					"value": "{\"filter\":[[\"score\",\"80\",\"lte\"]],\"page\":1,\"page_count\":2}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "fields",
+					"value": "[\"name\",\"score\"]",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "b8ca7cf9-e2ca-4706-a0f7-ecd6ce6a5273",
+			"name": "修改",
+			"url": "http://localhost:7777/api/data/test/?query={\"id\":1}",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/javascript"
+				}
+			],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "query",
+					"value": "{\"id\":1}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"name\": \"bb\"\n}",
+			"headers": "Content-Type: application/javascript\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "c7926efd-71cb-4057-a3cf-5ee04ebcb0ba",
+			"name": "比较，排序",
+			"url": "http://localhost:7777/api/data/test/?options={\"filter\":[[\"score\",\"79\",\"lte\"]],\"sort\":[[\"score\",\"asc\"]]}",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "options",
+					"value": "{\"filter\":[[\"score\",\"79\",\"lte\"]],\"sort\":[[\"score\",\"asc\"]]}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ee0b9641-776a-4ae7-b27c-1fd8ec5f85d7",
+			"name": "删除",
+			"url": "http://localhost:7777/api/data/test/",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\"id\":1}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}

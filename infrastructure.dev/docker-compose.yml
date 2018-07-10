@@ -1,0 +1,22 @@
+version: '2'
+services:
+    mysql:
+        image: mysql:5.7.16
+        ports:
+            - 3333:3306
+        environment:
+            - TZ=Asia/Shanghai
+        command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+        volumes:
+            - ./mysql_data:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=123456
+            - LANG=C.UTF-8
+        restart: always
+    redis:
+        image: 'bitnami/redis:latest'
+        ports:
+            - '6379:6379'
+        environment:
+            - DISABLE_COMMANDS=FLUSHDB,FLUSHALL,CONFIG
+            - REDIS_PASSWORD=password123

@@ -3,9 +3,9 @@ package imports
 import "github.com/gin-gonic/gin"
 import core "github.com/shaomingquan/webcore/core"
 
-import "github.com/shaomingquan/webcore-sample/apps/task"
+import "github.com/shaomingquan/webcore-curd-sample/apps/task"
 
-import middwares "github.com/shaomingquan/webcore-sample/middwares"
+import middwares "github.com/shaomingquan/webcore-curd-sample/middwares"
 
 func Start_task(app *core.App) {
 
