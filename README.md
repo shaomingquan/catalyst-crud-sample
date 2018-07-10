@@ -10,7 +10,7 @@ install project vendors
 
 install mysql and create test table (./infrastructure.dev could help)
 
-import `curd demo.postman_collection.json` with post, see request samples
+import `curd demo.postman_collection.json` with postman, see request samples
 
 1, define a model and define its lifecycle:
 
