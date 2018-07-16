@@ -15,7 +15,7 @@ import `curd demo.postman_collection.json` with postman, see request samples
 1, define a model and define its lifecycle:
 
 - SingleInstance: single instance just for unmarshal
-- ListInstance: return collection of test instance, just for return values
+- ListInstance: return collection of test instance, just for return values·
 - NewInstance: when new item, add some default value
 - ReturnInstance: when get list
 - Put???

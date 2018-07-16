@@ -16,13 +16,12 @@ type GetOptions struct {
 	IN        map[string][]interface{} `json:"in"`
 }
 
-// Get 应付单表的一切查询
 func Get(
 	feilds []string,
-	db *gorm.DB, // 数据库连接
-	query interface{}, // 查询条件
-	getOptions *GetOptions, // 过滤条件二进制
-	list interface{}, // 列表
+	db *gorm.DB,
+	query interface{},
+	getOptions *GetOptions,
+	list interface{},
 ) error {
 
 	chain := commonQuery(feilds, db, query, getOptions, list)
@@ -33,13 +32,12 @@ func Get(
 	return nil
 }
 
-// UpdateIfExsit
 func UpdateIfExsit(
 	feilds []string,
-	db *gorm.DB, // 数据库连接
-	query interface{}, // 查询条件
-	new interface{}, // 新的
-	list interface{}, // 列表
+	db *gorm.DB,
+	query interface{},
+	new interface{},
+	list interface{},
 ) error {
 	chain := commonQuery(feilds, db, query, &GetOptions{}, list)
 	check := chain.Find(list, query)
@@ -51,15 +49,14 @@ func UpdateIfExsit(
 		return errors.New("db error")
 	}
 
-	if len(byted) > 2 { // exsit
+	if len(byted) > 2 {
 		Put(db, query, new)
-	} else { // new
+	} else {
 		Post(db, new)
 	}
 	return nil
 }
 
-// Post 通用添加数据
 func Post(
 	db *gorm.DB,
 	entity interface{},
@@ -71,7 +68,6 @@ func Post(
 	return nil
 }
 
-// Put 通用数据库put方法
 func Put(
 	db *gorm.DB,
 	query interface{},
@@ -84,7 +80,6 @@ func Put(
 	return nil
 }
 
-// Delete 通用的数据库删除方法
 func Delete(
 	db *gorm.DB,
 	queryOnlyID interface{},
@@ -96,17 +91,15 @@ func Delete(
 	return nil
 }
 
-// Count 通用计数
 func Count(
-	db *gorm.DB, // 数据库连接
-	query interface{}, // 查询条件
-	getOptions *GetOptions, // 过滤条件二进制
-	list interface{}, // 列表
+	db *gorm.DB,
+	query interface{},
+	getOptions *GetOptions,
+	list interface{},
 ) (int, error) {
 
 	chain := commonQuery([]string{}, db, query, getOptions, list)
 	count := 0
-	// 这里有个问题是只有调用Find，gorm才识别真正的Model，否则识别不到表，暂且用limit1，保证性能
 	check := chain.Where(query).Limit(1).Find(list).Limit(-1).Count(&count)
 	if check == nil {
 		return 0, errors.New("db error")
@@ -116,18 +109,16 @@ func Count(
 
 func commonQuery(
 	feilds []string,
-	db *gorm.DB, // 数据库连接
-	query interface{}, // 查询条件
-	getOptions *GetOptions, // 过滤条件二进制
-	list interface{}, // 列表
+	db *gorm.DB,
+	query interface{},
+	getOptions *GetOptions,
+	list interface{},
 ) *gorm.DB {
 
 	fds := "*"
 	if len(feilds) > 0 {
 		fds = strings.Join(feilds, ",")
 	}
-
-	println("fdseeee", fds)
 
 	chain := db.Select(fds)
 	if getOptions.Filter != nil {
@@ -136,7 +127,6 @@ func commonQuery(
 			filtervalue := item[1]
 			filtertype := item[2].(string)
 
-			// 如果未指定前缀和后缀，表示contain
 			if filtertype == "like" {
 				if !strings.Contains(filtervalue.(string), "%") {
 					filtervalue = "%" + filtervalue.(string) + "%"

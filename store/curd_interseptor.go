@@ -34,7 +34,7 @@ func Curd(prefix, model string) gin.HandlerFunc {
 				err := DoGET(ctx, db, single, list)
 
 				if err != nil {
-					HttpEndWith400(ctx, err)
+					HttpEndWith500(ctx, errs.New("db error"))
 					return
 				}
 
@@ -43,7 +43,7 @@ func Curd(prefix, model string) gin.HandlerFunc {
 				count, page, err := DoCount(ctx, db, single2, list2)
 
 				if err != nil {
-					HttpEndWith400(ctx, err)
+					HttpEndWith500(ctx, errs.New("db error"))
 					return
 				}
 
@@ -198,10 +198,20 @@ func DoDELETE(ctx *gin.Context, db *gorm.DB, query interface{}) error {
 }
 
 func checkId(body []byte) bool {
-	ret := map[string]int{}
+	ret := map[string]interface{}{}
 	json.Unmarshal(body, &ret)
 
-	_, ok := ret["id"]
+	id, ok := ret["id"]
+	if !ok {
+		return false
+	}
+
+	_, ok = id.(string)
+	if ok {
+		return false
+	}
+
+	_, ok = id.(float64)
 
 	return ok
 }
