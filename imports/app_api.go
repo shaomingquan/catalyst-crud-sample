@@ -16,20 +16,20 @@ func Start_api(app *core.App) {
 
 	app.Router(
 		"/api",
-		api.MethodOfWorld,
-		api.PrefixOfWorld,
-		middwares.Demo(`root-api-world-decorator`),
+		api.MethodOfHello,
+		api.PrefixOfHello,
 
-		api.HandlerOfWorld,
+		api.HandlerOfHello,
 		func(ctx *gin.Context) { ctx.Next() },
 	)
 
 	app.Router(
 		"/api",
-		api.MethodOfHello,
-		api.PrefixOfHello,
+		api.MethodOfWorld,
+		api.PrefixOfWorld,
+		middwares.Demo(`root-api-world-decorator`),
 
-		api.HandlerOfHello,
+		api.HandlerOfWorld,
 		func(ctx *gin.Context) { ctx.Next() },
 	)
 

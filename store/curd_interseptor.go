@@ -67,9 +67,8 @@ func Curd(prefix, model string) gin.HandlerFunc {
 
 			case "PUT":
 				single := instanceGenerator.SingleInstance(ctx)
-				single2 := instanceGenerator.SingleInstance(ctx)
 
-				err := DoPUT(ctx, db, single, single2)
+				err := DoPUT(ctx, db, single)
 
 				if err != nil {
 					HttpEndWith400(ctx, err)
@@ -77,7 +76,7 @@ func Curd(prefix, model string) gin.HandlerFunc {
 				}
 
 				ctx.JSON(200, gin.H{
-					"updatedparams": single2,
+					"update": single,
 				})
 
 			case "DELETE":
@@ -161,7 +160,7 @@ func DoPOST(ctx *gin.Context, db *gorm.DB, newinstance interface{}) error {
 	return err
 }
 
-func DoPUT(ctx *gin.Context, db *gorm.DB, query, newinstance interface{}) error {
+func DoPUT(ctx *gin.Context, db *gorm.DB, query interface{}) error {
 	// insert if first
 	queryStr := ctx.Query("query")
 
@@ -173,8 +172,9 @@ func DoPUT(ctx *gin.Context, db *gorm.DB, query, newinstance interface{}) error 
 
 	json.Unmarshal([]byte(queryStr), query) // get
 
+	newinstance := map[string]interface{}{}
 	jsonBody, _ := ctx.GetRawData() // json in post body
-	json.Unmarshal(jsonBody, newinstance)
+	json.Unmarshal(jsonBody, &newinstance)
 
 	err := Put(db, query, newinstance)
 
