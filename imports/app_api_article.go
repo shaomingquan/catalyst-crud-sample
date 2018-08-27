@@ -7,9 +7,9 @@ import "net/http"
 import validator "gopkg.in/validator.v2"
 import gene "github.com/shaomingquan/webcore/gene"
 
-import "github.com/shaomingquan/webcore-curd-sample/apps/api/article"
+import "github.com/shaomingquan/webcore-crud-sample/apps/api/article"
 
-import middwares "github.com/shaomingquan/webcore-curd-sample/middwares"
+import middwares "github.com/shaomingquan/webcore-crud-sample/middwares"
 
 func Start_api_article(app *core.App) {
 

@@ -3,17 +3,17 @@ package imports
 import "github.com/gin-gonic/gin"
 import core "github.com/shaomingquan/webcore/core"
 
-import "github.com/shaomingquan/webcore-curd-sample/apps"
+import "github.com/shaomingquan/webcore-crud-sample/apps"
 
-import store "github.com/shaomingquan/webcore-curd-sample/store"
+import store "github.com/shaomingquan/webcore-crud-sample/store"
 
-import middwares "github.com/shaomingquan/webcore-curd-sample/middwares"
+import middwares "github.com/shaomingquan/webcore-crud-sample/middwares"
 
 func Start_(app *core.App) {
 
 	app.MidWare(
 		"/",
-		store.Curd(`/api/data/test/`, `test`),
+		store.Crud(`/api/data/test/`, `test`),
 	)
 
 	app.MidWare(

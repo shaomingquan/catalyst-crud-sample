@@ -11,7 +11,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-func Curd(prefix, model string) gin.HandlerFunc {
+func Crud(prefix, model string) gin.HandlerFunc {
 
 	instanceGenerator := modelInstanceMapper[model]
 

@@ -3,9 +3,9 @@ package imports
 import "github.com/gin-gonic/gin"
 import core "github.com/shaomingquan/webcore/core"
 
-import "github.com/shaomingquan/webcore-curd-sample/apps/api"
+import "github.com/shaomingquan/webcore-crud-sample/apps/api"
 
-import middwares "github.com/shaomingquan/webcore-curd-sample/middwares"
+import middwares "github.com/shaomingquan/webcore-crud-sample/middwares"
 
 func Start_api(app *core.App) {
 

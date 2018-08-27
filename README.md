@@ -1,8 +1,8 @@
-# webcore-curd-sample
+# webcore-crud-sample
 
 > it's an extention template base on [webcore-sample](https://github.com/shaomingquan/webcore-sample)
 
-***benifit: build basic curd api quickly***
+***benifit: build basic crud api quickly***
 
 0, prepare
 
@@ -10,7 +10,7 @@ install project vendors
 
 install mysql and create test table (./infrastructure.dev could help)
 
-import `curd demo.postman_collection.json` with postman, see request samples
+import `crud demo.postman_collection.json` with postman, see request samples
 
 1, define a model and define its lifecycle:
 
@@ -67,15 +67,15 @@ var modelInstanceMapper = map[string]InstanceLifecycle{
 }
 ```
 
-2, declare curd interseptor
+2, declare crud interseptor
 
 ```go
 package apps
 
 var MiddlewaresComposer = []string{
 
-	// curd interseptor
-	"store@Curd#/api/data/test/,test",
+	// crud interseptor
+	"store@Crud#/api/data/test/,test",
 
 	"middwares@Demo#root", // pkg@method#param1,param2
 }
