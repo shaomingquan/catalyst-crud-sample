@@ -1,3 +1,3 @@
 package article
 
-//go:generate webcore gene
+//go:generate catalyst gene

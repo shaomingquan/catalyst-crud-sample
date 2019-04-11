@@ -1,11 +1,11 @@
 package imports
 
 import "github.com/gin-gonic/gin"
-import core "github.com/shaomingquan/webcore/core"
+import core "github.com/shaomingquan/catalyst/core"
 
-import "github.com/shaomingquan/webcore-crud-sample/apps/api"
+import "github.com/shaomingquan/catalyst-crud-sample/apps/api"
 
-import middwares "github.com/shaomingquan/webcore-crud-sample/middwares"
+import middwares "github.com/shaomingquan/catalyst-crud-sample/middwares"
 
 func Start_api(app *core.App) {
 

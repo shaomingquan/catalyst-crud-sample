@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	core "github.com/shaomingquan/webcore/core"
+	core "github.com/shaomingquan/catalyst/core"
 )
 
 var app = core.App{}

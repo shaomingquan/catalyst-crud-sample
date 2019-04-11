@@ -1,3 +1,3 @@
 package apps
 
-//go:generate webcore gene
+//go:generate catalyst gene

@@ -64,19 +64,19 @@
 		},
 		{
 			"checksumSHA1": "3eKK0sY8rt3OD0rA3Yi07c9orPk=",
-			"path": "github.com/shaomingquan/webcore",
+			"path": "github.com/shaomingquan/catalyst",
 			"revision": "7953c4cd15a04da09447d492a28b85b0aff0d9e2",
 			"revisionTime": "2018-07-10T10:41:52Z"
 		},
 		{
 			"checksumSHA1": "z7B6i0rjVOJp/hW62EF4uhgJQBs=",
-			"path": "github.com/shaomingquan/webcore/core",
+			"path": "github.com/shaomingquan/catalyst/core",
 			"revision": "7953c4cd15a04da09447d492a28b85b0aff0d9e2",
 			"revisionTime": "2018-07-10T10:41:52Z"
 		},
 		{
 			"checksumSHA1": "RoEmyd0mVmajgVnkFu6Qjf90QPs=",
-			"path": "github.com/shaomingquan/webcore/gene",
+			"path": "github.com/shaomingquan/catalyst/gene",
 			"revision": "7953c4cd15a04da09447d492a28b85b0aff0d9e2",
 			"revisionTime": "2018-07-10T10:41:52Z"
 		},
@@ -105,5 +105,5 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "github.com/shaomingquan/webcore-crud-sample"
+	"rootPath": "github.com/shaomingquan/catalyst-crud-sample"
 }

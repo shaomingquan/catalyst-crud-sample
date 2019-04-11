@@ -1,5 +1,5 @@
 {
-    "appname": "webcore-crud-sample",
+    "appname": "catalyst-crud-sample",
 	"port":    7777,
-    "approot": "github.com/shaomingquan/webcore-crud-sample"
+    "approot": "github.com/shaomingquan/catalyst-crud-sample"
 }

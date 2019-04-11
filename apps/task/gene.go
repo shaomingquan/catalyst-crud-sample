@@ -1,3 +1,3 @@
 package task
 
-//go:generate webcore gene
+//go:generate catalyst gene
