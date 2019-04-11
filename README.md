@@ -1,6 +1,6 @@
-# webcore-crud-sample
+# catalyst-crud-sample
 
-> it's an extention template base on [webcore-sample](https://github.com/shaomingquan/webcore-sample)
+> it's an extention template base on [catalyst-sample](https://github.com/shaomingquan/catalyst-sample)
 
 ***benifit: build basic crud api quickly***
 
